@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@import "remixicon/fonts/remixicon.css";
+
+@theme {
+  --primary-color: #F18B21;
+  --secondary-color: #0f172a;
+
+}
+
+
+body {
+  color: #0f172a;
+}
+
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  /* White background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  /* Gray thumb */
+  border-radius: 9999px;
+  border: 2px solid #ffffff;
+  /* White border around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+  /* Darker gray on hover */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af #ffffff;
+  /* thumb track */
+}
+
+
+body:has(.not-found-marker) #site-header,
+body:has(.not-found-marker) #site-footer {
+  display: none;
+}
+
+body:has(.not-found-marker) main {
+  margin: 0;
+}
+
+
+/* dots slider */
+
+.hero-slider .hero-slider-pagination {
+  position: absolute;
+  left: 50% !important;
+  bottom: 20px !important;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: auto !important;
+  transform: translateX(-50%);
+}
+
+.hero-slider .hero-slider-pagination .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  margin: 0 !important;
+
+  background: rgb(255 255 255 / 90%);
+  opacity: 1;
+}
+
+.hero-slider .hero-slider-pagination .swiper-pagination-bullet-active {
+  width: 28px;
+  border-radius: 999px;
+  background: var(--primary-color);
+}
