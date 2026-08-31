@@ -4,13 +4,21 @@ import Link from "next/link";
 export default function Footer() {
     const footerLinks = {
         Product: [
-            { label: "Markets", href: "/markets" },
-            { label: "Trade", href: "/trade" },
+            { label: "About Social Partnership", href: "/about-social-partnership" },
+            { label: "Financial report", href: "/financial-report" },
+            { label: "Statistics", href: "/statistics" },
+            { label: "Acknowledgments", href: "/acknowledgments" },
+            { label: "Friends and partners", href: "/friends-and-partners" },
+            { label: "Fund's good news", href: "/fund-good-news" },
+            { label: "FAQs", href: "/faqs" },
+            { label: "If you ne­­ed help", href: "/i-need-help" },
         ],
 
         Resources: [
-            { label: "Learn", href: "/learn" },
-            { label: "Market News", href: "/news" },
+            { label: "Terms & Conditions", href: "/terms-and-conditions" },
+            { label: "Privacy Policy", href: "/privacy-policy" },
+            { label: "Elderly wishes", href: "/elderly-wishes" },
+            { label: "Children's wishes", href: "/children-wishes" },
         ],
 
         Company: [
@@ -84,11 +92,11 @@ export default function Footer() {
                     {Object.entries(footerLinks).map(
                         ([title, links]) => (
                             <div key={title}>
-                                <h3 className="text-sm font-semibold text-slate-950">
+                                {/* <h3 className="text-sm font-semibold text-slate-950">
                                     {title}
-                                </h3>
+                                </h3> */}
 
-                                <ul className="mt-4 space-y-3">
+                                <ul className="space-y-3">
                                     {links.map((link) => (
                                         <li key={link.label}>
                                             <Link
